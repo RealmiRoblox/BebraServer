@@ -24,18 +24,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
-      # Runs a single command using the runners shell
-      - name: Обновить репозитории
-        run: sudo apt-get update
-        
-      # Runs a single command using the runners shell
-      - name: Установить OpenJDK
-        run: sudo apt-get install openjdk-8-jdk
         
       # Runs a single command using the runners shell
       - name: Установить параметры
-        run: sudo update-alternatives --config java
+        run: sudo update-alternatives --set java /usr/lib/jvm/temurin-8-jdk-amd64/bin/java
         
       # Runs a single command using the runners shell
       - name: Запуск сервера BebraWare
