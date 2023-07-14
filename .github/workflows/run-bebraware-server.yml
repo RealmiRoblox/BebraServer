@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Run-BebraServer
 
 # Controls when the workflow will run
 on:
@@ -27,11 +27,11 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Update repositories
-        run: apt-get update
+        run: sudo apt-get update
         
       # Runs a single command using the runners shell
       - name: Install OpenJDK
-        run: apt-get install openjdk-8-jdk
+        run: sudo apt-get install openjdk-8-jdk
 
       # Runs a single command using the runners shell
       - name: Run BebraServer
