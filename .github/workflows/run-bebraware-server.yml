@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  Install_Required_Components_and_start:
+  Main:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -26,17 +26,17 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: Update repositories
+      - name: Обновить репозитории
         run: sudo apt-get update
         
       # Runs a single command using the runners shell
-      - name: Install OpenJDK
+      - name: Установить OpenJDK
         run: sudo apt-get install openjdk-8-jdk
         
       # Runs a single command using the runners shell
-      - name: Set OpenJDK 8 in default
+      - name: Установить параметры
         run: sudo update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
         
       # Runs a single command using the runners shell
-      - name: Start
+      - name: Запуск сервера BebraWare
         run: java -jar server.jar
