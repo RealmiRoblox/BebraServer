@@ -35,7 +35,7 @@ jobs:
         
       # Runs a single command using the runners shell
       - name: Set OpenJDK 8 in default
-        run: update-alternatives --set java /usr/lib/jvm/jdk1.8.0_version/bin/java
+        run: update-alternatives --set java
         
       # Runs a single command using the runners shell
       - name: Start
