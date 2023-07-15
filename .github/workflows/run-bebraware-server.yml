@@ -28,9 +28,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Установить параметры
         run: sudo update-alternatives --set java /usr/lib/jvm/temurin-8-jdk-amd64/bin/java
-      # Runs a single command using the runners shell
-      - name: Проверить файлы
-        run: ls
         
       # Runs a single command using the runners shell
       - name: Запуск сервера BebraWare
